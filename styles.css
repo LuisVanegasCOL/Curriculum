@@ -44,6 +44,7 @@ header .contact-info p {
     font-size: 1.1em;
     margin-top: 10px;
 }
+
 main {
     display: grid;
     grid-template-columns: 1fr;
@@ -95,7 +96,7 @@ ul li strong {
 
 .skills-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
 
@@ -124,4 +125,72 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+/* Media Queries para hacer la página responsiva */
+
+/* Tablet (768px y menores) */
+@media screen and (max-width: 768px) {
+    main {
+        padding: 20px;
+    }
+
+    header .contact-info h1 {
+        font-size: 2em;
+    }
+
+    header .contact-info p {
+        font-size: 1em;
+    }
+
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    .skill-category {
+        padding: 10px;
+    }
+}
+
+/* Móviles (480px y menores) */
+@media screen and (max-width: 480px) {
+    header {
+        padding: 20px;
+    }
+
+    header .contact-info h1 {
+        font-size: 1.5em;
+    }
+
+    header .contact-info p {
+        font-size: 0.9em;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .skill-category {
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
 }
